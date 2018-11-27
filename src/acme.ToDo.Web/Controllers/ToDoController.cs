@@ -2,6 +2,7 @@
 using acme.ToDo.Web.Services;
 using acme.ToDo.Web.ViewModels;
 using cloudscribe.Web.Common.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading;
@@ -18,6 +19,7 @@ namespace acme.ToDo.Web.Controllers
 
         private readonly ToDoService _toDoService;
 
+        [Authorize(Policy = "ToDoPolicy")]
         public async Task<IActionResult> Index(CancellationToken cancellationToken)
         {
             var items = await _toDoService.GetIncompleteItems(cancellationToken);
@@ -30,6 +32,7 @@ namespace acme.ToDo.Web.Controllers
             return View(model);
         }
 
+        [Authorize(Policy = "ToDoPolicy")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddItem(ToDoItem newItem)
@@ -45,6 +48,7 @@ namespace acme.ToDo.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize(Policy = "ToDoPolicy")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> MarkDone(Guid id)
