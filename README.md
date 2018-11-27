@@ -18,7 +18,7 @@ This sample is intended to show a reasonable approach to building a typical CRUD
 ## Points of Interest Illustrated in this solution
 
 * Organizing feature code into class libraries and using the main web application primarily as a composition root where everything gets wired up.
-* How to keep Entity Framework data access code and migrations in a sepoarate class library
+* How to keep Entity Framework data access code and migrations in a separate class library
 * How to [generate migrations](/src/acme.ToDo.Data/README.md) when the EF code is in a separate class library
 * How to automatically apply EFCore migrations during application startup, see Program.cs in the web app
 * How to keep views in a separate class library so you can easily change to different views in the future (ie using bootstrap 4 now but what if something else comes along in the future)
@@ -27,3 +27,7 @@ This sample is intended to show a reasonable approach to building a typical CRUD
 * The menu item for the ToDo feature is in the navigation.xml file and uses the named authorization policy to filter it from the menu if not logged in.
 * The ToDoService depends on the cloudscribe IUserContextResolver to get the current user in order to tag the ToDo items with the userid and the siteid, and in order to retrieve them using userid and siteid
 * The example includes implementations of cloudscribe IHandleSitePreDelete and IHandleUserPreDelete in order to delete To Do items if a user or site is deleted.
+
+## Have Questions? Join our gitter chat
+
+[![Join the chat at https://gitter.im/joeaudette/cloudscribe](https://badges.gitter.im/joeaudette/cloudscribe.svg)](https://gitter.im/joeaudette/cloudscribe?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
