@@ -1,13 +1,11 @@
-﻿using acme.ToDo.Web.Services;
+﻿using acme.ToDo.Models;
+using acme.ToDo.Web.Services;
 using acme.ToDo.Web.ViewModels;
-using Microsoft.AspNetCore.Mvc;
 using cloudscribe.Web.Common.Extensions;
+using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using acme.ToDo.Models;
 
 namespace acme.ToDo.Web.Controllers
 {
