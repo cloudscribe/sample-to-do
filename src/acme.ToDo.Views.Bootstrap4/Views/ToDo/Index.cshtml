@@ -1,0 +1,25 @@
+@model ToDoViewModel;
+@{
+    ViewData["Title"] = "Manage your to do list";
+}
+<h2>@ViewData["Title"]</h2>
+
+@await Html.PartialAsync("AddItemPartial", new ToDoItem())
+
+@if (Model.Items.Count > 0)
+{
+    <ul class="list-unstyled">
+        @foreach (var item in Model.Items)
+        {
+            <li class="mb-1">
+
+                <form class="form-inline" asp-action="MarkDone" method="POST">
+                    <input type="hidden" name="id" value="@item.Id">
+                    <button type="submit" class="btn btn-success mr-2" title="Mark complete"><i class="fas fa-check-circle"></i></button>
+                    @item.Name
+                </form>
+            </li>
+
+        }
+    </ul>
+}

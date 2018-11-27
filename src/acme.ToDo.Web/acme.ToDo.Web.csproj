@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\acme.ToDo.Models\acme.ToDo.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <PackageReference Include="cloudscribe.Core.Models" Version="3.0.9" />
+    <PackageReference Include="cloudscribe.Web.Common" Version="3.0.16" />
+    
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.1.1" />
+
+  </ItemGroup>
+
+</Project>
