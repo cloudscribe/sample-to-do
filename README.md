@@ -28,6 +28,4 @@ This sample is intended to show a reasonable approach to building a typical CRUD
 * The ToDoService depends on the cloudscribe IUserContextResolver to get the current user in order to tag the ToDo items with the userid and the siteid, and in order to retrieve them using userid and siteid
 * The example includes implementations of cloudscribe IHandleSitePreDelete and IHandleUserPreDelete in order to delete To Do items if a user or site is deleted.
 
-## Have Questions? Join our gitter chat
-
-[![Join the chat at https://gitter.im/joeaudette/cloudscribe](https://badges.gitter.im/joeaudette/cloudscribe.svg)](https://gitter.im/joeaudette/cloudscribe?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+If you have questions please visit our community forums https://www.cloudscribe.com/forum
